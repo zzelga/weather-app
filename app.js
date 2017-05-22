@@ -23,4 +23,13 @@ geocode.geocodeAddress(argv.address, (error, results) => {
   }
 });
 
-weather.getWeather();
+const latitude = 28.385233;
+const longitude = -81.563874;
+
+weather.getWeather(latitude, longitude, (error, results) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(`The temperature is currently ${results.temperature}, but feels like ${results.apparentTemperature}.`);
+  }
+});

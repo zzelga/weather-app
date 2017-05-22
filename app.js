@@ -19,17 +19,13 @@ geocode.geocodeAddress(argv.address, (error, results) => {
   if (error) {
     console.log(error);
   } else {
-    console.log(JSON.stringify(results, null, 2));
-  }
-});
-
-const latitude = 28.385233;
-const longitude = -81.563874;
-
-weather.getWeather(latitude, longitude, (error, results) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(`The temperature is currently ${results.temperature}, but feels like ${results.apparentTemperature}.`);
+    console.log(results.address);
+    weather.getWeather(results.latitude, results.longitude, (error, weatherResults) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(`It's currently ${weatherResults.temperature}.\nIt feels like ${weatherResults.apparentTemperature}.`);
+      }
+    });
   }
 });

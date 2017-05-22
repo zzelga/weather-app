@@ -10,3 +10,7 @@ It makes use of the Google API, as well as the Forecast.io API.
 It requires an API key for Forecast.io, obtainable from [https://darksky.net/dev/](https://darksky.net/dev/)
 
 Once you have an API key, rename the .env.sample file to .env - then replace the XXXXX within the file with your key.
+
+## Thing to note
+
+app-promise.js is merely a self-contained Promises-based version of app.js

@@ -2,7 +2,7 @@
 
 This is a command-line utility, that fetches the temperature (current and apparent) for a given address.
 
-It takes a single argument for the address:
+It takes a single argument for the address, via the flag **--address** or it's alias **-a**
 
 ```
 node app.js --address "address that you want to fetch the weather for"

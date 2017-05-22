@@ -3,7 +3,10 @@
 This is a command-line utility, that fetches the temperature (current and apparent) for a given address.
 
 It takes a single argument for the address:
---address "address you want the weather for"
+
+```
+node app.js --address "address that you want to fetch the weather for"
+```
 
 It makes use of the Google API, as well as the Forecast.io API.
 
